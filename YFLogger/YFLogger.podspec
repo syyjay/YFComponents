@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFLogger'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = '轻量级日志框架'
   s.description      = '支持分级日志、格式化输出、文件存储的轻量级日志框架'
   s.homepage         = 'https://github.com/syyjay/YFComponents'

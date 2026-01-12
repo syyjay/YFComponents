@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFExtensions'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'iOS 常用扩展集合'
 
   s.description      = <<-DESC

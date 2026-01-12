@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFUIKit'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'iOS 通用 UI 组件库'
 
   s.description      = <<-DESC
