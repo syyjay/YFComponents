@@ -20,10 +20,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
 
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'YFUIKit/Classes/**/*'
 
   s.resource_bundles = {
-    'YFUIKit' => ['Assets/**/*.{png,xcassets,json}']
+    'YFUIKit' => ['YFUIKit/Assets/**/*.{png,xcassets,json}']
   }
 
   s.dependency 'SnapKit', '~> 5.0'

@@ -23,18 +23,18 @@ Pod::Spec.new do |s|
 
   # Foundation 扩展
   s.subspec 'Foundation' do |ss|
-    ss.source_files = 'Classes/Foundation/**/*'
+    ss.source_files = 'YFExtensions/Classes/Foundation/**/*'
   end
 
   # UIKit 扩展（不含 Color）
   s.subspec 'UIKit' do |ss|
-    ss.source_files = 'Classes/UIKit/UIView+YF.swift',
-                      'Classes/UIKit/UIImage+YF.swift',
-                      'Classes/UIKit/UIViewController+YF.swift'
+    ss.source_files = 'YFExtensions/Classes/UIKit/UIView+YF.swift',
+                      'YFExtensions/Classes/UIKit/UIImage+YF.swift',
+                      'YFExtensions/Classes/UIKit/UIViewController+YF.swift'
   end
 
   # Color 扩展（独立子模块）
   s.subspec 'Color' do |ss|
-    ss.source_files = 'Classes/UIKit/UIColor+YF.swift'
+    ss.source_files = 'YFExtensions/Classes/UIKit/UIColor+YF.swift'
   end
 end

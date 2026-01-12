@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/syyjay/YFComponents.git', :tag => "YFLogger-#{s.version.to_s}" }
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'YFLogger/Classes/**/*'
 end
