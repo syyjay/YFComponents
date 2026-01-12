@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/syyjay/YFComponents.git', :tag => "YFMedia-#{s.version.to_s}" }
   s.ios.deployment_target = '14.0'
   s.swift_version = '5.0'
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'YFMedia/Classes/**/*'
   s.frameworks = 'UIKit', 'Photos', 'PhotosUI', 'AVFoundation'
 
   s.dependency 'YFUIKit'
