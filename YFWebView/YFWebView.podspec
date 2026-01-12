@@ -12,12 +12,12 @@ Pod::Spec.new do |s|
     - URL 拦截处理
   DESC
   s.homepage         = 'https://github.com/syyjay/YFComponents'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT' }
   s.author           = { 'syyjay' => 'syyjay@sina.cn' }
   s.source           = { :git => 'https://github.com/syyjay/YFComponents.git', :tag => "YFWebView-#{s.version.to_s}" }
   s.ios.deployment_target = '14.0'
   s.swift_version = '5.0'
-  s.source_files = 'YFWebView/Classes/**/*'
+  s.source_files = 'YFWebView/YFWebView/Classes/**/*'
 
   s.dependency 'YFUIKit'
   s.dependency 'YFLogger'
