@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFMedia'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = '轻量级媒体选择和处理库'
   s.description      = '图片/视频选择、拍照、裁剪、压缩、预览'
   s.homepage         = 'https://github.com/syyjay/YFComponents'

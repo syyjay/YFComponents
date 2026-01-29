@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFNetwork'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = '基于 Moya 的易用网络请求封装'
 
   s.description      = <<-DESC

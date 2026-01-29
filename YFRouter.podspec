@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFRouter'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = '轻量级路由框架'
   s.description      = '支持页面注册、参数传递、拦截器、URL Scheme 的轻量级路由框架'
   s.homepage         = 'https://github.com/syyjay/YFComponents'

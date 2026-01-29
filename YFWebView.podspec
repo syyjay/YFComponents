@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFWebView'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = 'WKWebView 封装，支持 JS 交互、进度条、Cookie 管理'
   s.description      = <<-DESC
     YFWebView 是基于 WKWebView 的封装库，提供：
