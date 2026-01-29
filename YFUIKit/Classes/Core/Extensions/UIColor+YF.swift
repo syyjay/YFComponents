@@ -1,8 +1,8 @@
 //
 //  UIColor+YF.swift
-//  YFExtensions
+//  YFUIKit
 //
-//  UIColor 扩展（完整版）
+//  UIColor 通用扩展（Hex 初始化、颜色转换、亮度调整等）
 //
 
 import UIKit

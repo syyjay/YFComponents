@@ -1,6 +1,6 @@
 //
 //  UIView+YF.swift
-//  YFExtensions
+//  YFUIKit
 //
 //  UIView 扩展
 //
@@ -8,71 +8,71 @@
 import UIKit
 
 public extension UIView {
-    
+
     // MARK: - 便捷属性
-    
+
     var x: CGFloat {
         get { frame.origin.x }
         set { frame.origin.x = newValue }
     }
-    
+
     var y: CGFloat {
         get { frame.origin.y }
         set { frame.origin.y = newValue }
     }
-    
+
     var width: CGFloat {
         get { frame.size.width }
         set { frame.size.width = newValue }
     }
-    
+
     var height: CGFloat {
         get { frame.size.height }
         set { frame.size.height = newValue }
     }
-    
+
     var size: CGSize {
         get { frame.size }
         set { frame.size = newValue }
     }
-    
+
     var origin: CGPoint {
         get { frame.origin }
         set { frame.origin = newValue }
     }
-    
+
     var centerX: CGFloat {
         get { center.x }
         set { center.x = newValue }
     }
-    
+
     var centerY: CGFloat {
         get { center.y }
         set { center.y = newValue }
     }
-    
+
     var top: CGFloat {
         get { frame.origin.y }
         set { frame.origin.y = newValue }
     }
-    
+
     var bottom: CGFloat {
         get { frame.origin.y + frame.size.height }
         set { frame.origin.y = newValue - frame.size.height }
     }
-    
+
     var left: CGFloat {
         get { frame.origin.x }
         set { frame.origin.x = newValue }
     }
-    
+
     var right: CGFloat {
         get { frame.origin.x + frame.size.width }
         set { frame.origin.x = newValue - frame.size.width }
     }
-    
+
     // MARK: - 圆角
-    
+
     /// 设置圆角
     @discardableResult
     func cornerRadius(_ radius: CGFloat) -> Self {
@@ -80,7 +80,7 @@ public extension UIView {
         layer.masksToBounds = true
         return self
     }
-    
+
     /// 设置部分圆角
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(
@@ -92,7 +92,7 @@ public extension UIView {
         mask.path = path.cgPath
         layer.mask = mask
     }
-    
+
     /// 圆形
     @discardableResult
     func asCircle() -> Self {
@@ -100,9 +100,9 @@ public extension UIView {
         layer.masksToBounds = true
         return self
     }
-    
+
     // MARK: - 边框
-    
+
     /// 设置边框
     @discardableResult
     func border(width: CGFloat, color: UIColor) -> Self {
@@ -110,9 +110,9 @@ public extension UIView {
         layer.borderColor = color.cgColor
         return self
     }
-    
+
     // MARK: - 阴影
-    
+
     /// 设置阴影
     @discardableResult
     func shadow(
@@ -128,14 +128,14 @@ public extension UIView {
         layer.masksToBounds = false
         return self
     }
-    
+
     /// 移除阴影
     func removeShadow() {
         layer.shadowOpacity = 0
     }
-    
+
     // MARK: - 渐变
-    
+
     /// 添加渐变背景
     @discardableResult
     func gradient(
@@ -151,9 +151,9 @@ public extension UIView {
         layer.insertSublayer(gradientLayer, at: 0)
         return self
     }
-    
+
     // MARK: - 动画
-    
+
     /// 淡入
     func fadeIn(duration: TimeInterval = 0.3, completion: (() -> Void)? = nil) {
         alpha = 0
@@ -162,7 +162,7 @@ public extension UIView {
             self.alpha = 1
         }, completion: { _ in completion?() })
     }
-    
+
     /// 淡出
     func fadeOut(duration: TimeInterval = 0.3, completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: duration, animations: {
@@ -172,7 +172,7 @@ public extension UIView {
             completion?()
         })
     }
-    
+
     /// 抖动动画
     func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
@@ -181,9 +181,9 @@ public extension UIView {
         animation.values = [-10, 10, -8, 8, -5, 5, -2, 2, 0]
         layer.add(animation, forKey: "shake")
     }
-    
+
     // MARK: - 截图
-    
+
     /// 生成截图
     var screenshot: UIImage? {
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
@@ -192,9 +192,9 @@ public extension UIView {
         layer.render(in: context)
         return UIGraphicsGetImageFromCurrentImageContext()
     }
-    
+
     // MARK: - 层级
-    
+
     /// 获取所有父视图
     var superviews: [UIView] {
         var views: [UIView] = []
@@ -205,19 +205,19 @@ public extension UIView {
         }
         return views
     }
-    
+
     /// 获取所有子视图（递归）
     var allSubviews: [UIView] {
         subviews + subviews.flatMap { $0.allSubviews }
     }
-    
+
     /// 移除所有子视图
     func removeAllSubviews() {
         subviews.forEach { $0.removeFromSuperview() }
     }
-    
+
     // MARK: - 手势
-    
+
     /// 添加点击手势
     @discardableResult
     func onTap(_ action: @escaping () -> Void) -> UITapGestureRecognizer {
@@ -232,13 +232,13 @@ public extension UIView {
 
 private class TapGestureRecognizer: UITapGestureRecognizer {
     private var action: () -> Void
-    
+
     init(action: @escaping () -> Void) {
         self.action = action
         super.init(target: nil, action: nil)
         addTarget(self, action: #selector(handleTap))
     }
-    
+
     @objc private func handleTap() {
         action()
     }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import YFExtensions
 
 /// 颜色配置 - 自动适配暗黑模式
 public struct YFColorPalette {

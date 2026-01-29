@@ -27,6 +27,5 @@ Pod::Spec.new do |s|
   }
 
   s.dependency 'SnapKit', '~> 5.0'
-  s.dependency 'YFExtensions/Color'
 end
 

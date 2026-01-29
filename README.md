@@ -7,12 +7,12 @@ YF 组件库，单仓库多组件架构，包含以下模块：
 | 组件 | 说明 | 依赖 |
 |------|------|------|
 | **YFLogger** | 轻量级日志框架，支持分级日志、格式化输出、文件存储 | - |
-| **YFExtensions** | iOS 常用扩展集合，支持子模块按需引入 | - |
+| **YFExtensions** | iOS 常用扩展集合（Foundation） | - |
 | **YFStorage** | 轻量级数据存储封装（UserDefaults、Keychain、磁盘缓存） | - |
 | **YFRouter** | 轻量级路由框架，支持页面注册、参数传递、拦截器 | YFLogger |
 | **YFNetwork** | 基于 Moya 的易用网络请求封装 | Moya, YFLogger |
-| **YFUIKit** | iOS 通用 UI 组件库 | SnapKit, YFExtensions/Color |
-| **YFMedia** | 轻量级媒体选择和处理库 | YFUIKit, YFExtensions, YFLogger |
+| **YFUIKit** | iOS 通用 UI 组件库 + UIKit 扩展 | SnapKit |
+| **YFMedia** | 轻量级媒体选择和处理库 | YFUIKit, YFLogger |
 | **YFWebView** | WKWebView 封装，支持 JS 交互、进度条、Cookie 管理 | YFUIKit, YFLogger, SnapKit |
 
 ## 本地开发
@@ -73,11 +73,7 @@ YFLogger (基础)
     ├── YFWebView
     └── YFMedia
 
-YFExtensions (基础)
-    ├── YFUIKit
-    └── YFMedia
-
-YFUIKit
+YFUIKit (独立)
     ├── YFMedia
     └── YFWebView
 ```

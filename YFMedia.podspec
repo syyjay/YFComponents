@@ -13,6 +13,5 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit', 'Photos', 'PhotosUI', 'AVFoundation'
 
   s.dependency 'YFUIKit'
-  s.dependency 'YFExtensions'
   s.dependency 'YFLogger'
 end
