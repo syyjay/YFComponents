@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFUIKit'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = 'iOS 通用 UI 组件库'
 
   s.description      = <<-DESC
@@ -21,10 +21,6 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
 
   s.source_files = 'YFUIKit/Classes/**/*'
-
-  s.resource_bundles = {
-    'YFUIKit' => 'YFUIKit/Assets/**/*.{png,xcassets,json}'
-  }
 
   s.dependency 'SnapKit', '~> 5.0'
 end
